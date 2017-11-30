@@ -1,0 +1,57 @@
+.shopinfo{
+	overflow:hidden;
+	margin:25px 10px 30px;
+	font-size:15px;
+	img{
+		float:left;
+		width:25px;
+		height:25px;
+	}
+	span{float:left;
+		font-weight:700;
+		padding:0 5px;
+	}
+	p{
+		float:left;
+		width:60%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+}
+.mainul{
+	max-width:700px;
+	margin:0 auto;
+}
+.shoplist{
+	overflow-x:scroll;
+	white-space:nowrap;
+	&::-webkit-scrollbar {display:none}
+	li{
+
+		list-style: none;
+		width:150px;
+		margin:0 10px;
+		display: inline-block;
+		border:1px solid #f7f7f7;
+		img{
+			width:150px;
+			height:150px;
+		}
+		p{	line-height:20px;
+			   color: #505050;
+			padding:0 5px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		}
+		span{
+			font:700 16px/20px "";
+			color: #f05f50;
+		}
+		s{	font-size:14px;
+			    color: #9a9a9a;
+		}
+	}
+}

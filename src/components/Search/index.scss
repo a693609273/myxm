@@ -1,0 +1,33 @@
+.row{
+	.thumbnail{
+		width:100%;
+
+	}
+	img{
+		 height:47.13vw;
+		}
+	.caption{
+		p{padding:5px 10px;
+			color:red;
+		}
+		h5{
+			width:100%;
+					overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		}
+	}
+}
+div{
+font-size:14px;
+}
+.searchs{
+	width:100%;
+	padding:0 6px;
+	margin:8px 0;
+
+}
+.error{
+	font:700 20px/40px "";
+	text-align:center;
+}

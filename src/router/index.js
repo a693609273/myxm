@@ -1,4 +1,5 @@
 import React from "react"
+
 import {
   HashRouter as Router,
   Route,
@@ -13,9 +14,10 @@ import Main from "../components/Home/Main"
 import Category from "../components/Home/category"
 import Cart from "../components/Home/cart"
 import User from "../components/Home/user"
-// import store  from "../Redux/Store";
+import detail from "../components/detail"
+import store  from "../Redux/Store";
 const router = (
-	<Provider>
+	<Provider store={store}>
 	<Router>		
 		<App>
 			 <Switch>
@@ -35,6 +37,7 @@ const router = (
 					</Home>
 				}/>
 				<Route path="/search" component={Search}/>
+				<Route path="/detail/:type/:detailinfo" component={detail}/>
 				<Redirect from="*" to="/home"/>
 			</Switch>
 		</App>

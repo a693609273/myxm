@@ -6,7 +6,7 @@ module.exports = {
     devtool:"source-map",
     entry: {
         index:path.join(__dirname , "src/index.js")
-    }, //已多次提及的唯一入口文件
+    }, 
     output: {
         path: path.join(__dirname ,"dist"), //打包后的文件存放的地方
         filename: "[name].bundle.js",//打包后输出文件的文件名
@@ -18,17 +18,13 @@ module.exports = {
         contentBase: "./",  //content not from webpack is serverd
         port: '8088',
         historyApiFallback: true,
-
         proxy:{
-           '/api*': {
+           '/api/*': {
                   target: 'https://market.douban.com',
                   host: 'market.douban.com',
                   changeOrigin:true
-              }
+            }       
         }
-        // localshot:8088/v4/api/a.php
-        // https://m.maizuo.com/v4/api/a.php
-        // 
     },
 
 
