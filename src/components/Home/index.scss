@@ -2,8 +2,13 @@
 	display:flex;
 	justify-content: space-between;
 	text-align:center;
+	position:fixed;
+	top:10vh;
+	background:#fff;
+	width:100%;
 	li{
 		width:25%;
+		font-size:3vh;
 	}
 	a{
 		&.active{
@@ -13,4 +18,7 @@
 }
 	color:#000;
 }
+}
+.homechildren{
+	margin-top:8vh;
 }

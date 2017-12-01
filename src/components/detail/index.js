@@ -13,22 +13,23 @@ class detail extends React.Component{
 	}
 	componentDidMount() {
 	    // console.log(this.props.state);
-	    // console.log(this.props.match.params.type)
+	    console.log(this.props.match.params.type)
 	    // console.log(this.props.match.params.detailinfo)
 	    var details=this.props.state;
 	    var type=this.props.match.params.type;
 	    var id=this.props.match.params.detailinfo-0;
 	    var that=this;
-	    if(type=="search"){
+	    if(type=="search"||type=="categorytypelist"){
 	    	details[type]=details[type].data;
 	    }
+	    console.log(details[type]);
 	    if(details[type].length==0){
-	    	console.log(1);
 	    	this.props.history.push(`/home`);
 	    }
 	    else{
 	    _.forEach(details[type],function(value,index){
-	    	if(type=="search"){
+	    	if(type=="search"||type=="categorytypelist"){
+	    			    	console.log(1);
 	    		if(value.id==id){
 	    			// console.log(value);
 	    			value.photo_url=value.cover_url;
@@ -45,8 +46,6 @@ class detail extends React.Component{
 	}
 	render(){
 		var info=this.props.state.detail;
-		// console.log(this.props.state.detail)
-	
 		return <div>{
 			!!info?<div className="detail">
 			<img className="pto" src={info.photo_url?info.photo_url.replace(/http\w{0,1}:\/\//g,'https://images.weserv.nl/?url='):imgerror}/>

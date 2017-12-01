@@ -14,6 +14,7 @@ import Main from "../components/Home/Main"
 import Category from "../components/Home/category"
 import Cart from "../components/Home/cart"
 import User from "../components/Home/user"
+import categorytype from "../components/Home/categorytype"
 import detail from "../components/detail"
 import store  from "../Redux/Store";
 const router = (
@@ -38,6 +39,7 @@ const router = (
 				}/>
 				<Route path="/search" component={Search}/>
 				<Route path="/detail/:type/:detailinfo" component={detail}/>
+				<Route path="/categorytype/:id" component={categorytype}/>
 				<Redirect from="*" to="/home"/>
 			</Switch>
 		</App>

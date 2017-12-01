@@ -1,11 +1,21 @@
+
+.pageactive{
+	color:#fff !important;
+	background:#337ab7 !important;
+}
+
+.scrolls{
+	height:80vw;
+	overflow-y:scroll;
+}
 .shopinfo{
 	overflow:hidden;
 	margin:25px 10px 30px;
-	font-size:15px;
+	font-size:3vh;
 	img{
 		float:left;
-		width:25px;
-		height:25px;
+		width:4vh;
+		height:4vh;
 	}
 	span{float:left;
 		font-weight:700;
@@ -21,25 +31,28 @@
 
 }
 .mainul{
-	max-width:700px;
+	max-width:1080px;
 	margin:0 auto;
 }
 .shoplist{
+	font-size:2.4vh;
 	overflow-x:scroll;
 	white-space:nowrap;
 	&::-webkit-scrollbar {display:none}
 	li{
 
 		list-style: none;
-		width:150px;
+		width:15vh;
 		margin:0 10px;
 		display: inline-block;
 		border:1px solid #f7f7f7;
 		img{
-			width:150px;
-			height:150px;
+			width:15vh;
+			height:15vh;
+			margin-bottom: 5px;
+			display: block;
 		}
-		p{	line-height:20px;
+		p{	line-height:3.2vh;
 			   color: #505050;
 			padding:0 5px;
 		overflow: hidden;
@@ -47,10 +60,11 @@
 		white-space: nowrap;
 		}
 		span{
-			font:700 16px/20px "";
+			font:700 1.4vh/2.2vh "";
 			color: #f05f50;
+			padding:0 5px;
 		}
-		s{	font-size:14px;
+		s{	font-size:1.4vh;
 			    color: #9a9a9a;
 		}
 	}

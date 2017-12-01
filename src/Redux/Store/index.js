@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'; //处理异步action
 import reduxpromsie from "redux-promise";
 import {applyMiddleware} from "redux";
 
-import {MainList,detail,cart,search} from "../Reducer";
+import {MainList,detail,cart,search,categorytypelist} from "../Reducer";
 
 
 const composeEnhancers =
@@ -24,7 +24,8 @@ const store = createStore(combineReducers({
 	MainList:MainList,
 	detail:detail,
 	cart:cart,
-  search:search
+  search:search,
+  categorytypelist:categorytypelist
 }),enhancer);
 
 

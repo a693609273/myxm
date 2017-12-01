@@ -12,17 +12,19 @@ class Cart extends React.Component{
 			value:null
 		}
 	}
+	handclick(info){
+		this.props.changenum(info);
+	}
 
 	render(){
 		var price=0;
+		var lilist=[];
 		_.forEach(this.props.cart, function(value,index) {
   			price+=((parseFloat(value.info.price)-0)*value.num);
 			}); 
-		return <div>
-			<ul className="cartul">{
-				this.props.cart.length!=0?
+		this.props.cart.length!=0?
 				this.props.cart.map(item=>
-					<li key={item.info.id} className="clearfix">
+					lilist.push(<li key={item.info.id} className="clearfix">
 						<input type="checkbox" />
 						<div className="cartimg">
 						<img src={item.info.photo_url.replace(/http\w{0,1}:\/\//g,'https://images.weserv.nl/?url=')}/>
@@ -40,16 +42,17 @@ class Cart extends React.Component{
 						<span onClick={this.handclick.bind(this,{numtype:'jian',id:item.info.id})} className="glyphicon glyphicon-minus" aria-hidden="true"></span>
 						</div>
 						</div>
-					</li>
-					):<li>购物车为空</li>
+					</li>)
+					):lilist.push(<li className="center" key={1}>购物车为空</li>);
+		return <div>
+			<ul className="cartul">{
+				lilist
 			}
 			</ul>
 			<p className="buyland"><span>总价: ￥{price}</span><span className="send btn btn-primary">结算</span></p>
 		</div>
 	}
-	handclick(info){
-		this.props.changenum(info);
-	}
+	
 }
 
 export default connect(

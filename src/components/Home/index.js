@@ -26,9 +26,11 @@ class Home extends React.Component{
 				</li>
 
 			</ul>
+			<div className="homechildren">
 			{
 				this.props.children
 			}
+			</div>
 		</div>
 	}
 }
